@@ -26,7 +26,7 @@ The refrigerator continuously monitors temperature and humidity, detects food it
 • Servo motor (door locking system)  
 • DHT11 sensor (temperature and humidity monitoring)  
 • LCD display with I2C interface  
-• Power supply and supporting electronics
+
 
 ## 🧠 AI Food Detection
 
@@ -50,7 +50,7 @@ The following data are transmitted:
 • Temperature values  
 • Humidity levels  
 • Detected food objects  
-• Refrigerator access status
+
 
 ## 🖥 User Interface
 
@@ -69,18 +69,18 @@ All information is updated in real time using MQTT communication.
 
 The system is composed of three main software components:
 
-• STM32 Firmware
+# STM32 Firmware
 • RFID authentication
 • Sensor acquisition
 • LCD display control
 • Servo motor control
 
-ESP32-CAM Firmware
+# ESP32-CAM Firmware
 • Image capture
 • Edge Impulse inference
 • MQTT data transmission
 
-User Interface
+# User Interface
 • Data visualization
 • Real-time monitoring
 • MQTT communication
@@ -91,8 +91,7 @@ User Interface
 • Arduino IDE (ESP32-CAM)  
 • Edge Impulse  
 • MQTT Protocol  
-• Embedded C  
-• Computer Vision  
+• Embedded C   
 • ESP32-CAM
 
 ## 🚀 Future Improvements
