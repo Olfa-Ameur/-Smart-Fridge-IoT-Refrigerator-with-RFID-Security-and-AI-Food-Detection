@@ -69,18 +69,21 @@ All information is updated in real time using MQTT communication.
 
 The system is composed of three main software components:
 
-# STM32 Firmware
+ STM32 Firmware
+ 
 • RFID authentication
 • Sensor acquisition
 • LCD display control
 • Servo motor control
 
-# ESP32-CAM Firmware
+ ESP32-CAM Firmware
+ 
 • Image capture
 • Edge Impulse inference
 • MQTT data transmission
 
-# User Interface
+User Interface
+
 • Data visualization
 • Real-time monitoring
 • MQTT communication
