@@ -69,7 +69,7 @@ All information is updated in real time using MQTT communication.
 
 The system is composed of three main software components:
 
-STM32 Firmware
+• STM32 Firmware
 • RFID authentication
 • Sensor acquisition
 • LCD display control
