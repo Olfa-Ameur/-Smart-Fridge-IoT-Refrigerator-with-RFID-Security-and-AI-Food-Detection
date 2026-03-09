@@ -1,0 +1,16 @@
+# STM32 build files
+Debug/
+
+# IDE settings
+.settings/
+
+# Launch configurations
+*.launch
+
+# Binary files
+*.elf
+*.bin
+*.map
+
+# Temporary files
+*.log
