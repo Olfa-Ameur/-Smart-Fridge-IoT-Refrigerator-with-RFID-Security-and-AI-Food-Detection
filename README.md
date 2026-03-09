@@ -1,20 +1,115 @@
+## 📡 Project Overview
 
-Ce projet de "Smart Fridge" combine des technologies embarquées, de l'intelligence artificielle et du développement d'interface utilisateur pour créer un réfrigérateur intelligent capable de détecter et de surveiller son contenu, d'assurer la sécurité de l'accès et d'informer l'utilisateur en temps réel.
+The Smart Fridge project is an embedded IoT system designed to transform a traditional refrigerator into an intelligent device capable of monitoring its environment, securing access, and identifying stored food items using artificial intelligence.
 
-Fonctionnalités principales
-1. Contrôle d'accès sécurisé
-Module RFID et servo-moteur : Un système de contrôle d'accès par RFID est intégré pour sécuriser l'accès au réfrigérateur. Seul un badge RFID authentifié peut déverrouiller la porte, ce qui active un servo-moteur pour permettre l'ouverture.
-2. Surveillance de la température et de l'humidité
-Capteurs embarqués : Les capteurs intégrés mesurent en temps réel la température et l'humidité à l'intérieur du réfrigérateur.
-Transmission des données : Ces informations sont envoyées à une interface graphique qui permet de surveiller les conditions de conservation des aliments à distance.
-3. Détection des objets dans le réfrigérateur
-Communication entre STM32 Nucleo et ESP32-CAM : Le microcontrôleur STM32 Nucleo communique avec un module ESP32-CAM pour capturer et analyser les images de l'intérieur du réfrigérateur.
-Reconnaissance d'objets : Grâce à l'ESP32-CAM, le réfrigérateur peut détecter les objets présents, fournissant une vue d'ensemble du contenu en temps réel.
-Aspects avancés du projet
-1. Intelligence Artificielle (IA)
-Reconnaissance des objets : Un modèle de vision par ordinateur est utilisé pour identifier automatiquement les articles présents dans le réfrigérateur, offrant ainsi à l'utilisateur des informations sur le stock d'ingrédients.
-Amélioration continue : L'IA peut être améliorée pour identifier un plus large éventail d'objets et même suggérer des recettes en fonction du contenu.
-2. Interface Utilisateur (UI)
-Application Graphique : Une interface utilisateur conviviale affiche les données de température, d'humidité et le contenu du réfrigérateur.
-Accessibilité : L'interface est conçue pour être intuitive, permettant un contrôle et une surveillance facile via un ordinateur ou un appareil mobile.
+The system integrates multiple technologies including STM32 microcontrollers, ESP32-CAM vision modules, RFID authentication, environmental sensors, MQTT communication, and a graphical user interface.
 
+The refrigerator continuously monitors temperature and humidity, detects food items using a trained AI model, and transmits real-time data to a graphical dashboard accessible by the user.
+
+## ⚙️ Key Features
+
+• RFID-based secure access control  
+• Automatic door unlocking using servo motor  
+• Temperature monitoring using DHT11 sensor  
+• Humidity monitoring inside the refrigerator  
+• Real-time display on LCD screen  
+• AI-based food recognition using ESP32-CAM  
+• Detection of vegetables such as tomatoes and peppers  
+• MQTT communication for real-time data transmission  
+• Graphical interface for remote monitoring
+
+## 🧩 Hardware Components
+
+• STM32 Nucleo board (main controller)  
+• ESP32-CAM module (image capture and AI inference)  
+• RFID RC522 module (secure access authentication)  
+• Servo motor (door locking system)  
+• DHT11 sensor (temperature and humidity monitoring)  
+• LCD display with I2C interface  
+• Power supply and supporting electronics
+
+## 🧠 AI Food Detection
+
+The ESP32-CAM module is used to capture images inside the refrigerator.
+
+A computer vision model trained using **Edge Impulse** was deployed on the ESP32-CAM to identify food items stored inside the fridge.
+
+The training dataset was created by capturing multiple images of vegetables including:
+
+• Tomatoes  
+• Peppers
+
+The trained model runs directly on the ESP32-CAM using embedded inference and detects objects in real time.
+
+## 📡 MQTT Communication
+
+The system uses MQTT protocol for real-time data transmission between the embedded devices and the graphical user interface.
+
+The following data are transmitted:
+
+• Temperature values  
+• Humidity levels  
+• Detected food objects  
+• Refrigerator access status
+
+## 🖥 User Interface
+
+A graphical interface was developed to allow users to monitor the refrigerator remotely.
+
+The interface displays:
+
+• Current temperature  
+• Humidity level  
+• Detected food items  
+• System status
+
+All information is updated in real time using MQTT communication.
+
+## 💻 Software Architecture
+
+The system is composed of three main software components:
+
+STM32 Firmware
+• RFID authentication
+• Sensor acquisition
+• LCD display control
+• Servo motor control
+
+ESP32-CAM Firmware
+• Image capture
+• Edge Impulse inference
+• MQTT data transmission
+
+User Interface
+• Data visualization
+• Real-time monitoring
+• MQTT communication
+
+## 🛠 Tools & Technologies
+
+• STM32CubeIDE  
+• Arduino IDE (ESP32-CAM)  
+• Edge Impulse  
+• MQTT Protocol  
+• Embedded C  
+• Computer Vision  
+• ESP32-CAM
+
+## 🚀 Future Improvements
+
+• Food expiration tracking  
+• Recipe recommendation based on fridge content  
+• Mobile application integration  
+• Cloud data storage  
+• More advanced food recognition model
+
+## 👨‍💻 Author
+
+Embedded Systems & IoT Developer
+
+Interests:
+
+• Embedded systems  
+• Artificial intelligence on edge devices  
+• IoT architectures  
+• Computer vision
